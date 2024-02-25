@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UserAbdullo</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="h">
+        <a class="h1-link" href="{% url 'home' %}">UserAbdullo</a>
+      </h1>
+      <hr />
+    </header>
+    {% if user.is_authenticated %}
+      <p>Xush kelibsiz, {{user.username}}!</p>
+      <p><a href="{% url 'logout' %}">Chiqib ketish</a></p>
+    {% else %}
+      <p><a href="{% url 'login' %}">Saytga kirish</a> | <a href="{% url 'signup' %}">Ro'yhatdan o'tish</a> </p>
+    
+    {% endif %}
+
+    <div>{% block content %} {% endblock content %}</div>
+
+    <footer>
+      <h4><a id="Post-new" href="{% url 'post_new'%}">Yangi post</a></h4>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+*:focus {
+  outline: 3px solid blue;
+  padding: 5px;
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif ;
+  /* background-color: #717171; */
+}
+
+a {
+  text-decoration: none;
+  color: rgb(3, 57, 108);
+}
+
+a:hover {
+  color: rgb(1, 31, 75);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a:visited {
+  color: rgb(3, 57, 108);
+}
+
+/* .header {
+  position: relative;
+  top: 0;
+  padding: 0;
+  background-color: rgba(193, 193, 193, 0.744);
+} */
+
+.h1 {
+  color: green;
+}
+.h1:hover {
+  color: rgb(0, 255, 132);
+}
+
+#Post-new {
+  border: 3px solid blue;
+  padding: 5px;
+}
